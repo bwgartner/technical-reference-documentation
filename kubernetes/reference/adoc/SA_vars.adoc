@@ -1,4 +1,26 @@
+// adjust
+:mDescription: foo
+:mSocialDescr: bar
+:mFixMe: FixMe
+:comp1-full: Yoo
+:comp1-version1: Hoo
+:comp2-full: Hoo
+:comp2-version1: Yoo
+:revision-date: 2Oct2024
+
+:article-id: ECM
+:rev1-description: Original contribution
+:rev1-date: 2022-03-28
+:rev2-description: Metadata update
+:rev2-date: 2024-10-07
+
+
+// General
+// - metadata variables just begin with "m"
 :trd: Technical Reference Documentation
+
+:mSeries: Technical References
+:mType: Reference
 
 :companyName: SUSE
 :portfolioName: Rancher
@@ -6,6 +28,7 @@
 
 :useCase: Enterprise Kubernetes
 
+// Include more variables
 include::./CSP/SA_vars.adoc[]
 include::./IHV/SA_vars.adoc[]
 include::./ISV/SA_vars.adoc[]
@@ -23,23 +46,26 @@ ifdef::iRKE1[include::SUSE/RKE1/SA_vars.adoc[]]
 ifdef::iRKE2[include::SUSE/RKE2/SA_vars.adoc[]]
 ifdef::iK3s[include::SUSE/K3s/SA_vars.adoc[]]
 
+// Augment for various document types
 ifdef::RA,RC,RI,GS[]
 
+// Reference Configuration
 ifdef::RC[]
 :title: Layered Stack Deployment
-:type: Reference Configuration
+:mType: Reference Configuration
 endif::RC[]
 
+// Reference Implementation
 ifdef::RI[]
 :title: Introductory Deployment
-:type: Reference Implementation
+:mType: Reference Implementation
 :subtitle: Basic Steps
+:mTechPartner: SUSE
 endif::RI[]
 
 ifdef::GS[]
 :title: Tutorial Instance
-:type: Getting Started
-// :subtitle: 
+:mType: Getting Started
 endif::GS[]
 
 ifdef::focusRancher[]
@@ -87,38 +113,47 @@ ifdef::iIHV[]
 ifdef::IHV-Ampere[]
 :subtitle: {subtitle} {an_Ampere} (R) {familyAmpere-Altra} (R)
 :logo: {companyName}-{an_Ampere}.svg
+:mTechPartner: {an_Ampere}
 endif::IHV-Ampere[]
 ifdef::IHV-Cisco[]
 :subtitle: {subtitle} {vn_Cisco} (R)
 :logo: {companyName}-{vn_Cisco}.svg
+:mTechPartner: {vn_Cisco}
 endif::IHV-Cisco[]
 ifdef::IHV-Dell[]
 :subtitle: {subtitle} {vn_Dell} (R)
 :logo: {companyName}-{an_Dell}.svg
+:mTechPartner: {vn_Dell}
 endif::IHV-Dell[]
 ifdef::IHV-Fujitsu[]
 :subtitle: {subtitle} {vn_Fujitsu} (R)
 :logo: {companyName}-{an_Fujitsu}.svg
+:mTechPartner: {vn_Fujitsu}
 endif::IHV-Fujitsu[]
 ifdef::IHV-HPE[]
 :subtitle: {subtitle} {vn_HPE} (R)
 :logo: {companyName}-{an_HPE}.svg
+:mTechPartner: {vn_HPE}
 endif::IHV-HPE[]
 ifdef::IHV-HPQ[]
 :subtitle: {subtitle} {vn_HPQ} (R)
 :logo: {companyName}-{vn_HPQ}.svg
+:mTechPartner: {vn_HPQ}
 endif::IHV-HPQ[]
 ifdef::IHV-IBM[]
 :subtitle: {subtitle} {vn_IBM} (R)
 :logo: {companyName}-{an_IBM}.svg
+:mTechPartner: {vn_IBM}
 endif::IHV-IBM[]
 ifdef::IHV-LNVGY[]
 :subtitle: {subtitle} {vn_LNVGY} (R)
 :logo: {companyName}-{vn_LNVGY}.svg
+:mTechPartner: {vn_LNVGY}
 endif::IHV-LNVGY[]
 ifdef::IHV-SMCi[]
 :subtitle: {subtitle} {vn_SMCi} (R)
 :logo: {companyName}-{vn_SMCi}.svg
+:mTechPartner: {vn_SMCi}
 endif::IHV-SMCi[]
 endif::iIHV[]
 endif::RC[]
