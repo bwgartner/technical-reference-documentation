@@ -18,6 +18,7 @@ MAIN="SA.adoc"
 STYLEROOT="/usr/share/xml/docbook/stylesheet/trd"
 # Format Type
 ADOC_TYPE="book"
+#ADOC_TYPE="article"
 # Turn on postprocessing
 ADOC_POST="yes"
 # Leverage SUSE Best Practices
