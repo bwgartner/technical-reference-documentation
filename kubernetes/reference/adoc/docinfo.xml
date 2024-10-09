@@ -10,7 +10,6 @@
   </dm:bugtracker>
 </dm:docmanager>
 
-
 <!-- Note to author/editor
      - This docinfo XML file
        - includes and uses ... to minimize the need for edits
@@ -22,7 +21,7 @@
 	    - generally in common_docinfo_vars.adoc
 	    - specific ones can be in 
 	      - the main adoc content or
-	      - respective variables like in SA_vars.adoc file(s)
+	      - in various included SA_vars.adoc file(s)
      - Find more details on attribute/variables in var file comments and in
        https://github.com/SUSE/technical-reference-documentation/blob/main/common/templates/start/README.md -->
 
@@ -40,28 +39,28 @@
 
 <!-- ## Type ##
         - filter for the different document types
-        - only one of the type values is supported
-          NOTE: value(s) are in SA_vars.adoc -->
+          NOTE: value(s) are in SA_vars.adoc
+	        and are layered upon variable spaces -->
 <meta name="type">{mType}</meta>
 
 
 <!-- ## Document title / subtitle ##
+        - title is not included here
         - element is used for search and social media purposes
         - length is strictly limited to 55 characters
           NOTE: value(s) are in SA_vars.adoc
                 and are layered upon further variable spaces -->
-<title>{title}</title>
+<!-- <title>{title}</title> -->
 <subtitle>{subtitle}</subtitle>
 
 <!-- ## Brief abstract for document ##
-        - Update with an enticing summary in SA-Preface.adoc
-        - Augmented with disclaimer from common_docinfo_vars.adoc -->
+        - update with an enticing summary in SA_vars.adoc
+- augmented with {disclaimer} from common_docinfo_vars.adoc -->
 <abstract>
   <para>{preface}</para>
   <para> <emphasis role="strong">Disclaimer:</emphasis> {disclaimer} </para>
 </abstract>
 
-<!-- # FIXME -->
 <!-- ## Description ##
         - displayed on a search engine results page
         - the character limit is at 150
@@ -70,12 +69,11 @@
 <meta name="description">{mDescription}</meta>
 
 
-<!-- # FIXME -->
+<!-- # FIXME : work in progress -->
 <!-- ## Social media description ##
         - displayed whenever a document of ours is shared on X or Facebook
         - character limit is at 55
-          NOTE: value(s) are in SA_vars.adoc
-                and are layered upon variable spaces -->
+          NOTE: unused value noted in SA_vars.adoc -->
 <meta name="social-descr">{mSocialDescr}</meta>
 
 
@@ -83,9 +81,7 @@
 
 
 <!-- ## Task ##
-        - filter by task tab on the index page
-          NOTE: value(s) are in SA_vars.adoc
-                and are layered upon variable spaces -->
+        - filter by task tab on the index page -->
 <meta name="task">
   <phrase>Container Management</phrase>
   <phrase>Deployment</phrase>
@@ -93,49 +89,42 @@
 </meta>
 
 
-<!-- # FIXME -->
 <!-- ## Productname & Version ##
         - tells Google and friends what product and version a piece applies to
         - all the products named in these tags should be SUSE products only
           NOTE: value(s) are in SA_vars.adoc
-#     Replicate and follow the pattern to list additional SUSE components.
-#     Variables are defined in the adoc file.
-#     '<productname>' references the short name of the SUSE component.
-#     '<platform>' references the full/long name of the SUSE component.
-#     platform and product metadata
-#     Replicate for additional platforms.
-#     Define platform2, etc. in adoc file. -->
-<!-- <meta name="productname">
-  <productname version="5.4" os="slemicro">{productname}</productname>
-  <productname version="6.0" os="slmicro">{productname}</productname>
-</meta> -->
+                and are layered upon variable spaces -->
 <meta name="productname">
   <productname version="{comp1-version1}">{comp1-full}</productname>
   <productname version="{comp2-version1}">{comp2-full}</productname>
+  <productname version="{comp3-version1}">{comp3-full}</productname>
 </meta>
 
 
-<!-- # FIXME -->
+<!-- FIXME : work in progress -->
 <!-- ## Platform ##
-     Identifies the primary SUSE component in a more text-friendly way.
+        - Identifies the primary SUSE component in a more text-friendly way.
      For now, use the full component name and supported versions.
      E.g., "SUSE Linux Enterprise Server for SAP Applications 12 and 15"
      NOTE: This metadata tag will be deprecated in the next template release.
 -->
-<!-- <meta name="platform">{comp1-full}</meta> -->
+<!-- <meta name="platform">{comp1-full}</meta>
 <meta name="platform">{comp1-full} {comp1-version1}</meta>
-<meta name="platform">{comp2-full} {comp2-version1}</meta>
+<meta name="platform">{comp2-full} {comp2-version1}</meta> -->
 
 
-<!-- # FIXME -->
-<!-- ## SUSE product listing for Google Analytics ##
-     - For a single SUSE product, use a single set of
-       'productname' and 'productnumber' tag pairs.
-     - For multiple SUSE products, enclose a comma-delimited list
-       of product names and versions enclosed in a 'productname' tag pair.
-     - Do NOT use both forms.
--->
-<productname>{comp1-full} {comp1-version1}, {comp2-full} {comp2-version1}</productname>
+<!-- SUSE product listing for Google Analytics
+     - for a single SUSE product, use a single set of
+       'productname' and 'productnumber' tag pairs
+     - for multiple SUSE products, enclose a comma-delimited list
+       of product names and versions enclosed in a 'productname' tag pair
+     - do NOT use both forms
+       NOTE: value(s) are in SA_vars.adoc
+             and are layered upon variable spaces -->
+<!-- <productname>{productname}</productname>
+<productnumber>12 SP4, 12 SP5, 15, ...</productnumber> -->
+<!-- <productname>productname1 versionnumber, productname2 versionnumber, ...</productname> -->
+<productname>{mProductList}</productname>
 
 
 <!-- ## TechPartners ##
@@ -143,7 +132,8 @@
         - Identify technical partners (businesses or organizations)
           supplying components featured in the guide
         - Replicate the pattern to identify additional partners
-          NOTE: value(s) are in SA_vars.adoc -->
+          NOTE: value(s) are in SA_vars.adoc
+                and are layered upon variable spaces -->
 <meta name="techpartner">{mTechPartner}</meta>
 
 
@@ -207,7 +197,7 @@
 </cover>
 
 
-<!-- # FIXME -->
+<!-- FIXME : work in progress -->
 <!-- ## Revision History ##
         - Provide a complete revision history in reverse chronological order
           (most recent first).
@@ -232,19 +222,7 @@
 </revhistory> -->
 
 
-<!-- # FIXME -->
-<!-- SUSE product listing for Google Analytics
-     - For a single SUSE product, use a single set of
-       'productname' and 'productnumber' tag pairs.
-     - For multiple SUSE products, enclose a comma-delimited list
-       of product names and versions enclosed in a 'productname' tag pair.
-     - Do NOT use both forms.
--->
-<productname>{productname}</productname>
-<productnumber>12 SP4, 12 SP5, 15, ...</productnumber>
-<!-- <productname>productname1 versionnumber, productname2 versionnumber, ...</productname> -->
-
-
+<!-- FIXME : work in progress -->
 <!-- ## Date modified
         - filter for the most recently changed or added documents
         - NOTE: value(s) are in SA_vars.adoc -->
