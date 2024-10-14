@@ -207,6 +207,8 @@ ifdef::IHV-Ampere[]
 :subtitle: {subtitle} {an_Ampere} (R) {familyAmpere-Altra} (R)
 :logo: {companyName}-{an_Ampere}.svg
 :mTechPartner: {an_Ampere}
+:rev1-date: 2023-08-29
+:rev1-description: Original contribution
 endif::IHV-Ampere[]
 ifdef::IHV-Cisco[]
 :subtitle: {subtitle} {vn_Cisco} (R)
