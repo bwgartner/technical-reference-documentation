@@ -1,10 +1,9 @@
 // adjust 
 :revision-date: 2Oct2024
-:article-id: ECM
-:rev1-description: Original contribution
-:rev1-date: 2022-03-28
+:style: trd
+:article-id: enterprise-container-management
 :rev2-description: Metadata update
-:rev2-date: 2024-10-10
+:rev2-date: 2024-10-18
 :comp3-full: 
 :comp3-version1:
 
@@ -67,6 +66,8 @@ ifdef::RI[]
 :subtitle: Basic Steps
 :mType: {mType} Implementation
 :mTechPartner: SUSE
+:rev1-date: 2022-03-28
+:rev1-description: Original contribution
 endif::RI[]
 
 // Targeting Rancher
@@ -211,11 +212,15 @@ ifdef::IHV-Cisco[]
 :subtitle: {subtitle} {vn_Cisco} (R)
 :logo: {companyName}-{vn_Cisco}.svg
 :mTechPartner: {vn_Cisco}
+:rev1-date: 2023-12-18
+:rev1-description: Original contribution
 endif::IHV-Cisco[]
 ifdef::IHV-Dell[]
 :subtitle: {subtitle} {vn_Dell} (R)
 :logo: {companyName}-{an_Dell}.svg
 :mTechPartner: {vn_Dell}
+:rev1-date: 2022-03-28
+:rev1-description: Original contribution
 endif::IHV-Dell[]
 ifdef::IHV-Fujitsu[]
 :subtitle: {subtitle} {vn_Fujitsu} (R)
@@ -226,11 +231,15 @@ ifdef::IHV-HPE[]
 :subtitle: {subtitle} {vn_HPE} (R)
 :logo: {companyName}-{an_HPE}.svg
 :mTechPartner: {vn_HPE}
+:rev1-date: 2022-04-06
+:rev1-description: Original contribution
 endif::IHV-HPE[]
 ifdef::IHV-HPQ[]
 :subtitle: {subtitle} {vn_HPQ} (R)
 :logo: {companyName}-{vn_HPQ}.svg
 :mTechPartner: {vn_HPQ}
+:rev1-date: 2022-09-15
+:rev1-description: Original contribution
 endif::IHV-HPQ[]
 ifdef::IHV-IBM[]
 :subtitle: {subtitle} {vn_IBM} (R)
@@ -241,11 +250,15 @@ ifdef::IHV-LNVGY[]
 :subtitle: {subtitle} {vn_LNVGY} (R)
 :logo: {companyName}-{vn_LNVGY}.svg
 :mTechPartner: {vn_LNVGY}
+:rev1-date: 2022-12-22
+:rev1-description: Original contribution
 endif::IHV-LNVGY[]
 ifdef::IHV-SMCi[]
 :subtitle: {subtitle} {vn_SMCi} (R)
 :logo: {companyName}-{vn_SMCi}.svg
 :mTechPartner: {vn_SMCi}
+:rev1-date: 2022-03-28
+:rev1-description: Original contribution
 endif::IHV-SMCi[]
 
 endif::iIHV[]

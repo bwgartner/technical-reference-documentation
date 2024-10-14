@@ -69,7 +69,7 @@
 <meta name="description">{mDescription}</meta>
 
 
-<!-- # FIXME : work in progress -->
+<!-- # FIXME : still work in progress, since not done in RI/RC -->
 <!-- ## Social media description ##
         - displayed whenever a document of ours is shared on X or Facebook
         - character limit is at 55
@@ -101,16 +101,17 @@
 </meta>
 
 
-<!-- FIXME : work in progress -->
+<!-- FIXME : deprecated -->
 <!-- ## Platform ##
         - Identifies the primary SUSE component in a more text-friendly way.
      For now, use the full component name and supported versions.
      E.g., "SUSE Linux Enterprise Server for SAP Applications 12 and 15"
      NOTE: This metadata tag will be deprecated in the next template release.
 -->
-<!-- <meta name="platform">{comp1-full}</meta>
-<meta name="platform">{comp1-full} {comp1-version1}</meta>
-<meta name="platform">{comp2-full} {comp2-version1}</meta> -->
+<!-- <meta name="platform">{comp1-full}</meta> -->
+<!-- <meta name="platform">{comp1-full} {comp1-version1}</meta>
+<meta name="platform">{comp2-full} {comp2-version1}</meta>
+<meta name="platform">{comp3-full} {comp3-version1}</meta> -->
 
 
 <!-- SUSE product listing for Google Analytics
@@ -197,7 +198,6 @@
 </cover>
 
 
-<!-- FIXME : work in progress -->
 <!-- ## Revision History ##
         - Provide a complete revision history in reverse chronological order
           (most recent first).
@@ -206,7 +206,7 @@
         - Define revision variables ('rev1-date', 'rev1-description',
           'rev2-date', 'rev2-description', and so on) in the vars file.
 -->
-<!-- <revhistory xml:id="rh-art-{article-id}">
+<revhistory xml:id="rh-art-{article-id}">
   <revision>
     <date>{rev2-date}</date>
     <revdescription>
@@ -219,12 +219,13 @@
       <para>{rev1-description}</para>
     </revdescription>
   </revision>
-</revhistory> -->
+</revhistory>
 
 
-<!-- FIXME : work in progress -->
+<!-- FIXME : deprecated -->
 <!-- ## Date modified
         - filter for the most recently changed or added documents
-        - NOTE: value(s) are in SA_vars.adoc -->
-<meta name="updated">{revision-date}</meta>
+          NOTE: This metadata tag will be deprecated in the
+                next template release. -->
+<!-- <meta name="updated">{revision-date}</meta> -->
 
